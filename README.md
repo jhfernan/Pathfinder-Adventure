@@ -1,22 +1,10 @@
-# app
+# Pathfinder App
 
-> Pathfinder Game App
+### _Features to Implement_
 
-## Build Setup
-
-``` bash
-# install dependencies
-$ npm run install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
++ HP tracker
++ Spell slots used
++ Inventory tracker
++ Gold Tracker
++ Attack widget
++ Skill checks widget
