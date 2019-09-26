@@ -1,6 +1,6 @@
 <template>
 	<section>
-		<v-app-bar app clipped-right fixed>
+		<v-app-bar app clipped-right color="dark" dark fixed>
 			<v-toolbar-title v-text="title" />
 			<v-spacer />
 			<v-app-bar-nav-icon @click.stop="drawer = !drawer" />
@@ -39,8 +39,13 @@ export default {
 			items: [
 				{
 					icon: 'mdi-apps',
-					title: 'Welcome',
+					title: 'Home',
 					to: '/'
+				},
+				{
+					icon: 'mdi-apps',
+					title: 'Character Tool',
+					to: '/character_tool'
 				},
 			],
 			title: 'Pathfinder Adventures'

@@ -12,7 +12,7 @@ export default {
 			{ hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
 		],
 		link: [
-			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+			// { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
 		]
 	},
 	// Customize the progress-bar color
@@ -48,12 +48,12 @@ export default {
 			dark: false,
 			themes: {
 				dark: {
-					primary: colors.blue.darken2,
-					accent: colors.grey.darken3,
-					secondary: colors.amber.darken3,
-					info: colors.teal.lighten1,
-					warning: colors.amber.base,
-					error: colors.deepOrange.accent4,
+					primary: colors.blueGrey.base,
+					accent: colors.deepOrange.base,
+					secondary: colors.blueGrey.darken3,
+					info: colors.blue.lighten1,
+					warning: colors.yellow.base,
+					error: colors.red.accent4,
 					success: colors.green.accent3
 				}
 			}
