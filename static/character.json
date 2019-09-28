@@ -2,7 +2,7 @@
 	"name": "Kiah",
 	"player": "Jonathan",
 	"race": "Catfolk",
-	"gender": "f",
+	"gender": false,
 	"occupation": "Singer",
 	"languages": [
 		"common",
