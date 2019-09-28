@@ -1,45 +1,42 @@
 <template>
-	<v-card>
+	<v-card :class="`elevation-${elevation}`">
 		<v-card-text>
-			<v-card-text>
-				<div>
-					<span class="headline mr-1">{{ character.name }}</span>
-					(<em class="subtitle-1">{{ character.race }}</em>)
-					<v-icon class="pb-2" :color="character.gender ? 'blue' : 'pink'">
-						mdi-gender-{{ character.gender ? 'male' : 'female' }}
-					</v-icon>
-				</div>
-				<div class="subtitle-2">{{ character.player }}</div>
-				<div v-if="character.background
-					&& character.background.affluence
-					&& character.background.occupation
-					&& character.background.birthPlace
-					&& character.background.parents
-					&& diety">
-					<span><strong>{{ character.name }}</strong> grew up <strong>{{ character.background.affluence }}</strong>. </span>
-					<span>{{ character.gender ? 'He' : 'She' }} was born in </span>
-					<span><strong>{{ character.background.birthPlace }}</strong> and grew up </span>
-					<strong>
-						{{
-							character.background.parents == 'two'
-								? 'with two wonderful parents'
-								: character.background.parents == 'one' && character.background.parent
-									? 'with a loving father'
-									: character.background.parents == 'one' && !character.background.parent
-										? 'with a loving mother'
-										: 'alone as a street urchin'
-						}}
-					</strong>
-					<span>. {{ character.gender ? 'He' : 'She' }} worships </span>
-					<span v-if="diety.gods">
-						the {{ diety.gender }} <strong>{{ diety.name }}</strong>, the {{ diety.gender }} of {{ diety.of }}.
-					</span>
-					<span v-else>no god or virtue and prefers to believe only in oneself.</span>
-					<span> {{ character.gender ? 'He' : 'She' }} speaks <strong>{{ languages }}</strong>.</span>
-				</div>
-				<div v-else>Background not completed yet.</div>
-			</v-card-text>
-
+			<div>
+				<span class="headline mr-1">{{ character.name }}</span>
+				(<em class="subtitle-1 text-capitalize">{{ character.race }} {{ character.class }}</em>)
+				<v-icon class="pb-2" :color="character.gender ? 'blue' : 'pink'">
+					mdi-gender-{{ character.gender ? 'male' : 'female' }}
+				</v-icon>
+			</div>
+			<div class="subtitle-2">{{ character.player }}</div>
+			<div v-if="character.background
+				&& character.background.affluence
+				&& character.background.occupation
+				&& character.background.birthPlace
+				&& character.background.parents
+				&& diety && languages">
+				<span><strong>{{ character.name }}</strong> grew up <strong>{{ character.background.affluence }}</strong>. </span>
+				<span>{{ character.gender ? 'He' : 'She' }} was born in </span>
+				<span><strong>{{ character.background.birthPlace }}</strong> and grew up </span>
+				<strong>
+					{{
+						character.background.parents == 'two'
+							? 'with two wonderful parents'
+							: character.background.parents == 'one' && character.background.parent
+								? 'with a loving father'
+								: character.background.parents == 'one' && !character.background.parent
+									? 'with a loving mother'
+									: 'alone as a street urchin'
+					}}
+				</strong>
+				<span>. {{ character.gender ? 'He' : 'She' }} worships </span>
+				<span v-if="diety.gods">
+					the {{ diety.gender }} <strong>{{ diety.name }}</strong>, the {{ diety.gender }} of {{ diety.of }}.
+				</span>
+				<span v-else>no god or virtue and prefers to believe only in oneself.</span>
+				<span> {{ character.gender ? 'He' : 'She' }} speaks <strong>{{ languages }}</strong>.</span>
+			</div>
+			<div v-else>Background not completed yet.</div>
 		</v-card-text>
 	</v-card>
 </template>
@@ -90,25 +87,28 @@ export default {
 			type: Object,
 			default: function () {
 				return {
-					name: 'Kiah',
-					race: 'Catfolk',
-					gender: false,
-					player: 'Jonathan',
+					name: 'Name',
+					race: 'race',
+					class: 'class',
+					gender: true,
+					player: 'Player Name',
 					background: {
 						affluence: 'poor',
 						birthPlace: 'Magnamar',
 						diety: 'Cayden Cailean',
 						languages: [
 							'common',
-							'catfolk',
-							'elven'
 						],
-						occupation: 'Singer',
+						occupation: 'Dancer',
 						parents: 'one',
 						parent: false,
 					},
 				}
 			}
+		},
+		elevation: {
+			type: Number,
+			default: 7
 		},
 	}
 }

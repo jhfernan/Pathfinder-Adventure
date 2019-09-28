@@ -1,14 +1,22 @@
 {
 	"name": "Kiah",
 	"player": "Jonathan",
-	"race": "Catfolk",
+	"race": "catfolk",
+	"class": "bard",
 	"gender": false,
-	"occupation": "Singer",
-	"languages": [
-		"common",
-		"catfolk",
-		"elven"
-	],
+	"background": {
+		"affluence": "poor",
+		"birthPlace": "Magnamar",
+		"diety": "Cayden Cailean",
+		"languages": [
+			"common",
+			"catfolk",
+			"elven"
+		],
+		"occupation": "Singer",
+		"parents": "one",
+		"parent": false
+	},
 	"stats": {
 		"str": 10,
 		"dex": 18,
