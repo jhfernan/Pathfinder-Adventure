@@ -65,18 +65,16 @@ export default {
 		ability: 'dex',
 		acCheck: true,
 		uses: [
-			'',
-			'',
-			''
+			'Disarm Trap or Device',
+			'Sabotage Mechanical Item',
+			'Open a Lock'
 		],
 		notes: ''
 	},
 	disguise: {
 		ability: 'cha',
 		uses: [
-			'',
-			'',
-			''
+			'Change Your Appearance'
 		],
 		notes: ''
 	},
@@ -84,9 +82,11 @@ export default {
 		ability: 'dex',
 		acCheck: true,
 		uses: [
-			'',
-			'',
-			''
+			'Escape Ropes',
+			'Escape Manacles',
+			'Escape Net or Certain Spells',
+			'Escape Grapple',
+			'Move Through Tight Space'
 		],
 		notes: ''
 	},
@@ -94,18 +94,19 @@ export default {
 		ability: 'dex',
 		acCheck: true,
 		uses: [
-			'',
-			'',
-			''
+			'Avoid Falling After Collision',
+			'Negate Falling Damage'
 		],
-		notes: ''
+		notes: 'Flying in high winds adds penalties on your Fly checks'
 	},
 	handleAnimal: {
 		ability: 'cha',
 		uses: [
-			'',
-			'',
-			''
+			'Handle an Animal',
+			'Push an Animal',
+			'Teach an Animal a Trick',
+			'Train an Animal for a Purpose',
+			'Rear a Wild Animal'
 		],
 		notes: ''
 	},

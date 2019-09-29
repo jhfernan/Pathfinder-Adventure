@@ -1,11 +1,35 @@
 export default {
 	catfolk: {
 		ability: { dex: 2, wis: -2, cha: 2 },
-		skills: {
+		skillsTrained: {
 			acrobatics: true,
 			appraise: true,
 			bluff: true,
-			climb: true
+			climb: true,
+			craft: true,
+			diplomacy: true,
+			disguise: true,
+			escapeArtist: true,
+			intimidate: true,
+			knArcana: true,
+			knDungeoneering: true,
+			knEngineering: true,
+			knGeography: true,
+			knHistory: true,
+			knLocal: true,
+			knNature: true,
+			knNobility: true,
+			knPlanes: true,
+			knReligion: true,
+			linguistics: true,
+			perception: true,
+			perform: true,
+			profession: true,
+			senseMotive: true,
+			sleightOfHand: true,
+			spellcraft: true,
+			stealth: true,
+			useMagicDevice: true
 		}
 	}
 	// Acrobatics Dex
